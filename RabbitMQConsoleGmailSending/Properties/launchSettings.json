@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "RabbitMQConsoleGmailSharing": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "RABBITMQ_URI": "amqp://guest:guest@localhost:5672",
+        "EmailHost": "smtp-mail.outlook.com",
+        "EmailFrom": "eyyuperdogann1907@outlook.com",
+        "EmailPassword": "162539Eyyup",
+        "EmailPort": "587"
+      }
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

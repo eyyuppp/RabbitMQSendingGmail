@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "3J03kovSrfU409wS9mKu26mpVyibPKUH5gkuICcorcFb2l456AYKM2XZ0m/+lbcPnbNgH/xFKGTpcBlb5yWYOQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\P2636\\source\\repos\\RabbitMQ.GmailSending\\RabbitMQConsoleGmailSending\\RabbitMQConsoleGmailSending.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\P2636\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
+    "C:\\Users\\P2636\\.nuget\\packages\\mailkit\\4.2.0\\mailkit.4.2.0.nupkg.sha512",
+    "C:\\Users\\P2636\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.4\\microsoft.visualstudio.azure.containers.tools.targets.1.19.4.nupkg.sha512",
+    "C:\\Users\\P2636\\.nuget\\packages\\mimekit\\4.2.0\\mimekit.4.2.0.nupkg.sha512",
+    "C:\\Users\\P2636\\.nuget\\packages\\rabbitmq.client\\6.5.0\\rabbitmq.client.6.5.0.nupkg.sha512",
+    "C:\\Users\\P2636\\.nuget\\packages\\system.formats.asn1\\7.0.0\\system.formats.asn1.7.0.0.nupkg.sha512",
+    "C:\\Users\\P2636\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\P2636\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\P2636\\.nuget\\packages\\system.security.cryptography.pkcs\\7.0.2\\system.security.cryptography.pkcs.7.0.2.nupkg.sha512",
+    "C:\\Users\\P2636\\.nuget\\packages\\system.text.encoding.codepages\\7.0.0\\system.text.encoding.codepages.7.0.0.nupkg.sha512",
+    "C:\\Users\\P2636\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

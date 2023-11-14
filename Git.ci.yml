@@ -1,0 +1,19 @@
+stages:
+  - dockerize
+  
+build_image:
+  stage: dockerize
+  image: gcr.io/kaniko-project/executor:debug
+  variables:
+    DOCKERHUB_URI: $DOCKER_REGISTRY_URI
+    DOCKERHUB_USER: $DOCKER_REGISTRY_USER
+    DOCKERHUB_PASSWORD: $DOCKER_REGISTRY_PASSWORD
+    DOCKERHUB_MAIL: $DOCKER_REGISTRY_MAIL
+    DOCKERHUB_PROJECT_GROUP_NAME: $DOCKER_PROJECT_GROUP_NAME
+    DOCKERHUB_PROJECT_NAME: $DOCKER_PROJECT_NAME
+    DOCKERHUB_PROJECT_TAG: $DOCKER_PROJECT_TAG
+  script:
+    - chmod +x /builds/bnet/digital-card/vcard/kaniko-build.bat
+    - /builds/bnet/digital-card/vcard/kaniko-build.bat
+  only:
+    - main

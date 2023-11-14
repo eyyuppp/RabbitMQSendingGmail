@@ -1,0 +1,22 @@
+services:
+    rabbitmq:
+        image: rabbitmq:management
+        container_name: rabbitmq
+        ports:
+            - 5672:5672
+            - 15672:15672
+    consumer:
+        image : consumer
+        environment:
+            - RABBITMQ_URI=amqp://guest:guest@rabbitmq:5672
+            - EmailHost=smtp-mail.outlook.com
+            - EmailFrom=eyyuperdogann1907@outlook.com
+            - EmailPassword=şifre
+            - EmailPort=587
+    producer:
+        image : producer
+        environment:
+            - RABBITMQ_URI=amqp://guest:guest@rabbitmq:5672
+            - ASPNETCORE_ENVIRONMENT=Development
+        ports: 
+            - 1907:80
