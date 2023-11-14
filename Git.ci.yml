@@ -13,7 +13,7 @@ build_image:
     DOCKERHUB_PROJECT_NAME: $DOCKER_PROJECT_NAME
     DOCKERHUB_PROJECT_TAG: $DOCKER_PROJECT_TAG
   script:
-    - chmod +x /builds/bnet/digital-card/vcard/kaniko-build.bat
-    - /builds/bnet/digital-card/vcard/kaniko-build.bat
+    - chmod +x /builds/RabbitMQSendingGmail/kaniko-build.bat
+    - /builds/RabbitMQSendingGmail/kaniko-build.bat
   only:
     - main
