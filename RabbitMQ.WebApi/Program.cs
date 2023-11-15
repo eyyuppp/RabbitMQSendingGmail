@@ -1,6 +1,5 @@
 
 using Bussines.Services;
-using RabbitMQ.Core.Consumer;
 using RabbitMQ.Core.Producer;
 
 namespace RabbitMQ.WebApi
@@ -18,7 +17,7 @@ namespace RabbitMQ.WebApi
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<IRabbitMQWrite, RabbitMQWrite>();
-            builder.Services.AddScoped<IEmailService,EmailService>();
+            builder.Services.AddScoped<IEmailService, EmailService>();
 
             var app = builder.Build();
 
@@ -33,7 +32,7 @@ namespace RabbitMQ.WebApi
 
             app.UseAuthorization();
 
-            
+
             app.MapControllers();
 
             app.Run();

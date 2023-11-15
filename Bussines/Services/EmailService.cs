@@ -16,7 +16,7 @@ namespace Bussines.Services
                 emailTo.Subject = email.Subject;
                 emailTo.Body = new TextPart(TextFormat.Html)
                 {
-                    Text =email.Body 
+                    Text = email.Body
                 };
 
                 var smtp = new SmtpClient();

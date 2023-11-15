@@ -31,12 +31,12 @@ namespace RabbitMQ.Core.Consumer
             Console.WriteLine(" [*] Waiting for messages.");
             consumer.Received += async (object sender, BasicDeliverEventArgs e) =>
             {
-                    var message = Encoding.UTF8.GetString(e.Body.ToArray());
-                    var email = JsonSerializer.Deserialize<EmailEntity>(message);
-                    Console.WriteLine("Gelen Mesaj: " + message);
-                    Console.ReadLine();
-                    _service.Email(email);
-                    channel.BasicAck(e.DeliveryTag, false);
+                var message = Encoding.UTF8.GetString(e.Body.ToArray());
+                var email = JsonSerializer.Deserialize<EmailEntity>(message);
+                Console.WriteLine("Gelen Mesaj: " + message);
+                Console.ReadLine();
+                _service.Email(email);
+                channel.BasicAck(e.DeliveryTag, false);
 
             };
         }
