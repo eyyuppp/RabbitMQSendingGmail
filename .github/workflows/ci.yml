@@ -9,3 +9,13 @@ build_image:
     - /builds/Eyyuppp/RabbitMQSendingGmail/kaniko-build.bat
   only:
     - main
+    - name: Build with Gradle
+      run: ./gradlew build
+
+    - name: Build and Push Docker Image
+      uses: mr-smithers-excellent/docker-build-push@v4
+      with:
+        image: nanajanashia/demo-app
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
