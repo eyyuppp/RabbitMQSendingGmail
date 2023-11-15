@@ -6,10 +6,10 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Kaniko build
-        uses: eyyuperdogan/rabbitmqsendingemail@master
+        uses: eyyuperdogan/rabbitmqsendingmail@master
         with:
-          image: eyyuperdogan/rabbitmqsendingemail
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          image: eyyuperdogan/rabbitmqsendingmail
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
           cache: true
-          cache_registry: eyyuperdogan/rabbitmqsendingemail
+          cache_registry: eyyuperdogan/rabbitmqsendingmail
