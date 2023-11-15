@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Kaniko build
-        uses: aevea/action-kaniko@master
+        uses: eyyuperdogan/rabbitmqsendingemail@master
         with:
           image: eyyuperdogan/rabbitmqsendingemail
           username: ${{ secrets.DOCKERHUB_USERNAME }}
