@@ -1,0 +1,11 @@
+stages:
+  - dockerize
+  
+build_image:
+  stage: dockerize
+  image: gcr.io/kaniko-project/executor:debug
+  script:
+    - chmod +x /builds/Eyyuppp/RabbitMQSendingGmail/kaniko-build.bat
+    - /builds/Eyyuppp/RabbitMQSendingGmail/kaniko-build.bat
+  only:
+    - main
