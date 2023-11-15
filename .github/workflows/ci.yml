@@ -1,18 +1,19 @@
-stages:
-  - dockerize
-  
-build_image:
-  stage: dockerize
-  image: gcr.io/kaniko-project/executor:debug
-  script:
-    - chmod +x /builds/Eyyuppp/RabbitMQSendingGmail/kaniko-build.bat
-    - /builds/Eyyuppp/RabbitMQSendingGmail/kaniko-build.bat
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
   only:
     - main
-    - name: Build with Gradle
+     name: Build with Gradle
       run: ./gradlew build
 
     - name: Build and Push Docker Image
+      uses: mr-smithers-excellent/docker-build-push@v4
+      with:
+        image: eyyuperdogan/rabbitmqsendingemail
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
         image: nanajanashia/demo-app
